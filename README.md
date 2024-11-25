@@ -20,7 +20,7 @@ You can read about the water jug problem in [wikipedia](https://en.wikipedia.org
 
 🚀 First, make sure that you have node js installed, and then launch the development server:
 
-````bash
+```bash
 npm install
 npm run dev
 ```
