@@ -1,20 +1,27 @@
-import type { Config } from 'tailwindcss'
+import typograhpy from '@tailwindcss/typography';
+import type { Config } from 'tailwindcss';
 
-const config: Config = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+export default {
+  content: ['./src/**/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)']
       },
-    },
+      colors: {
+        primary: '#161616',
+        secondary: '#6F6F6F',
+        'primary-dark': '#EDEDED',
+        'secondary-dark': '#A0A0A0'
+      },
+      spacing: {
+      }
+    }
   },
-  plugins: [],
-}
-export default config
+  darkMode: 'class',
+  future: {
+    hoverOnlyWhenSupported: true
+  },
+  plugins: [typograhpy]
+} satisfies Config;
