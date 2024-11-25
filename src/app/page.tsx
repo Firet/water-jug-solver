@@ -99,7 +99,7 @@ export default function Home() {
               <Heading as="h2">Solution Steps:</Heading>
 
               <div className="flex flex-col gap-3">
-                {solutionSteps.map((step, index) => (
+                {solutionSteps.map((step) => (
                   <div key={step.number} >
                     <strong>Step {step.number}:</strong> {step.explanation}
                   </div>
